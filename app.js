@@ -48,7 +48,7 @@ function draw(userChoice , computerChoice) {
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
     const userChoice_div = document.getElementById(userChoice);
-    result_p.innerHTML = `${converToWord(userChoice)} ${smallUserWord} equals ${converToWord(computerChoice)} ${smallCompWord}. It;s a draw 🌓`;
+    result_p.innerHTML = `${converToWord(userChoice)} ${smallUserWord} equals ${converToWord(computerChoice)} ${smallCompWord}. It's a draw 🌓`;
     userChoice_div.classList.add('gray_glow');
     setTimeout(() => userChoice_div.classList.remove('gray_glow'), 300);
 }
