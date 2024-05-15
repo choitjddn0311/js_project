@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.addImg {
+    width: 400px;
+    height: 400px;
+    background-color: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.inputImg {
+    width: 450px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+input {
+    width: 73px;
+}
