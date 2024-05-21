@@ -1,8 +1,8 @@
-const express = require('express');
-const app = express();
-app.use(express.json());
-app.listen(3001 , () => {
-    console.log('http://localhost:3001');
+const express = require('express'); // 내가 express js를 쓰니까 express 모듈을 불러와 express라는 변수에 할당
+const app = express(); // 서버에 핵심기능 처리부분 
+app.use(express.json());  //서버응답과 클라이언트 사이에 부분을 처리해줌
+app.listen(3001 , () => { //서버 시작 부분 arrow함수사용해 3001포트 연결
+    console.log('http://localhost:3001'); //성공되면 메시지창에 이 메시지를 띄워라
 });
 app.get('/' , (req , res) => {
     res.send('인평자동차고등학교');
