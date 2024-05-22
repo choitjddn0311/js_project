@@ -1,11 +1,13 @@
-const express = require('express');
-const app = express();
-app.use(express.json());
-app.listen(3001 , () => {
-    console.log('http://localhost:3001');
+const express = require('express');  // require()함수자체가 node에서 모듈가져올때 사용한다고 함 express모듈을 가지고 와서 express라는 변수에 insert
+const app = express(); // express 를 실행하는 함수를 호출해 app 변수에 삽입
+app.use(express.json()); //json 파일에 ㄷ접근하여 requsest를 해줌.<-- 사용자가 json파일에 쉽게 접근요청(클라이언트)
+app.listen(3001 , () => { // 3001포트로 연결시키는 부분 localhost:3001에서 요청대기 listen은 콜백함수라 함(콜백함수란 다른함수를 파라미터로 받아 내부호출)
+    console.log('http://localhost:3001'); //성공하면 터미널에 http://localhost:3001출력해라 하는 부분
 });
-app.get('/' , (req , res) => {
-    res.send('인평자동차고등학교');
+app.get('/' , (req , res) => { //루트 경로로 들어가면 get요청을 한다
+    res.send('안녕하세요 최성우의 게시판입니다.'); //response 로 '여기' <-- 내용을 전달해 서버로 반환 결국 서버 접속할때 res.send(ㅁ세지) 출력 
 });
 
-// https://velog.io/@seo__namu/Express-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0
+// 미들웨어라는게 있는게 express에서 요청(request)와 응답(respone)사이에 실행되는 함수라더라 요청응답 다 수행해주고 미들웨어 함수는 세가지 인수가 있는데  --> req(request) , res(response) , next 다음미들웨어로 전달하는 함수
+
+//서버 연결 새로고침 귀찮을땐 nodemon깔으면 됨 새로고침만 하면 끝ㅌ~~
