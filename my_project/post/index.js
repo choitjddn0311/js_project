@@ -9,12 +9,12 @@ const posts = {
 
 //글 다 보기
 router.get('/' , (req,res) => {
-    /**글 전체가 보이는코드 */
+    res.send(posts.data);
 });
 
 // 글 하나만 보는거
 router.get('/:id' , (req,res) => {
-    //글 하나만 볼수있는 코드
+    const post = posts.data.find((post) => post.id == parseInt(req.params.id)); //post.data배열에서 첫번째게시물을 찾는다 이 아이디가 
 })
 
 // 글 올리는거
