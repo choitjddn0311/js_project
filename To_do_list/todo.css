@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poetsen One' , sans-serif;
+}
+body {
+    background: #0e1f2e;
+}
+.contain {
+    width: 450px;
+    height: 600px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background: white;
+}
+form {
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+form > #txt {
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #0e1f2e;
+    font-size: 1.3em;
+}
+form > #plus {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 30px;
+    border: none;
+    font-weight: 100;
+    color: #fff;
+    background: #0e1f2e;
+    cursor: pointer;
+}
