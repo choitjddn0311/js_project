@@ -6,7 +6,7 @@ plus.addEventListener('click' , ()=> {
     let li = document.createElement('li');
     let del = document.createElement('button');
 
-    del.textContent = 'del';
+    del.textContent = 'delete';
     del.addEventListener('click' , () => {
         todo.removeChild(li);
     });
