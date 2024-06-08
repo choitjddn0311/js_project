@@ -15,6 +15,9 @@ plus.addEventListener('click' , ()=> {
     li.appendChild(del);
     todo.appendChild(li);
     text.value = '';
+    if (text === ' ') {
+           
+    }
 })
 
 /**
