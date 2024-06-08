@@ -6,7 +6,7 @@ plus.addEventListener('click' , ()=> {
     let li = document.createElement('li');
     let del = document.createElement('button');
 
-    del.textContent = '삭제';
+    del.textContent = 'del';
     del.addEventListener('click' , () => {
         todo.removeChild(li);
     });
@@ -16,3 +16,9 @@ plus.addEventListener('click' , ()=> {
     todo.appendChild(li);
     text.value = '';
 })
+
+/**
+ * 해야할 것
+ * 1) input에 입력한 후 엔터치면 추가되게 할것
+ * 2) input 안에 값이 없을경우 추가가 되지않게 할것
+ */
