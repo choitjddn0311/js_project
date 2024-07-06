@@ -15,9 +15,6 @@ function changeColor() {
     textColor.style.color = color;
     colorBtn.style.backgroundColor = color;
     rgbName.style.color = color;
+    rgbName.innerText = color;
 }
 colorBtn.addEventListener('click' , changeColor)
-colorBtn.addEventListener('click' , ()=> {
-    const colorText = randomColor();
-    rgbName.innerText = colorText;
-})
