@@ -24,6 +24,7 @@ body {
 .title > h3 {
     color: #1b263b;
     font-size: 1.3em;
+    text-transform: capitalize;
 }
 .colorName {
     height: 100px;
@@ -59,4 +60,5 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
 }
