@@ -18,6 +18,7 @@ body {
     transform: translate(-50% , -50%);
     background: white;
     border-radius: 5px;
+    box-shadow: 0 0 100px #304779;
 }
 form {
     width: 400px;
@@ -35,7 +36,9 @@ form > #txt {
     left: 30px;
     outline: none;
     border: none;
-    border-bottom: 1px solid #0e1f2e;
+    border-bottom: 1px solid #ccc;
+    color: #ccc;
+    font-weight: 300;
     font-size: 1.3em;
 }
 form > #plus {
@@ -71,4 +74,7 @@ form > #plus {
     border: none;
     margin: 0 10px;
     cursor: pointer;
+    background: rgb(72, 150, 223); 
+    color: #fff;
+    font-size: 17px;
 }
