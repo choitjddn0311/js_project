@@ -1,6 +1,7 @@
 let text = document.getElementById("txt");
 let plus = document.getElementById("plus");
 let todo = document.getElementById("todo");
+let body = document.querySelector("body");
 
 plus.addEventListener('click' , ()=> {
     let li = document.createElement('li');
@@ -21,3 +22,6 @@ plus.addEventListener('click' , ()=> {
         text.value = '';
     }
 });
+
+
+//시간 뜨게 하기
