@@ -1,7 +1,10 @@
+const hangmanImage = document.querySelector('.hangman-box img');
 const wordDisplay = document.querySelector('.word-display');
+const guessesText = document.querySelector('.guesses-text b');
 const keyboardDiv = document.querySelector('.keyboard');
 
-let currentWord;
+let currentWord, wrongGuessCount = 0;
+const maxGuesses = 6;
 
 const getRandomWord = () => {
     //wordList파일에서 랜덤 단어와 힌트를 선택한다
@@ -13,11 +16,20 @@ const getRandomWord = () => {
 }
 
 const initGame = (button, clickedLetter) => {
-    if(currentWord,includes(clickedLetter)) {
-        console.log(clickedLetter, " is exist on the word");
+    if(currentWord.includes(clickedLetter)) {
+        [...currentWord].forEach((letter, index) => {
+            if(letter === clickedLetter) {
+                wordDisplay.querySelectorAll("li")[index].innerText = letter;
+                wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
+            }
+        })
     } else {
-        console.log(clickedLetter, " is not exist on the word");
+        wrongGuessCount++;
+        hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`
     }
+
+    button.disabled = true;
+    guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
 }
 
 // 키보드 버튼 만드는 for문
