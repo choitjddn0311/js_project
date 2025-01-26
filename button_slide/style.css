@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+header {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    align-content: center;
+    background: #aaa;
+}
+.slideCon {
+    width: 100%;
+    height: 800px;
+    background: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonCon {
+    display: flex;
+    gap: 1600px;
+    position: absolute;
+}
+.buttonCon > button {
+    width: 50px;
+    height: 50px;
+    background: #111;
+    border: none;
+    color: #fff;
+}
+.buttonCon > button:hover {
+    cursor: pointer;
+}
+.slideCon > .slide {
+    width: 1440px;
+    height: 600px;
+    background: red;
+    overflow: hidden;
+    position: relative;
+}
+.slideInner {
+    width: calc(1440px * 4);
+    height: 600px;
+    background: #bbb;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all .5s ;
+}
+.slideInner > li {
+    width: 1440px;
+    height: 100%;
+}
