@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    align-content: center;
+}
+.container {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container > canvas {
+    width: 600px;
+    height: 600px;
+    background: #fff;
+    box-shadow: 0 0 20px #efefef;
+}
