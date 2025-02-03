@@ -22,6 +22,7 @@ main > .showBox {
     width: 100%;
     height: 200px;
     background: gainsboro;
+    display: flex;
 }
 main > .numBox {
     width: 100%;
