@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+li {
+    list-style: none;
+}
+main {
+    width: 400px;
+    height: 600px;
+    background: pink;
+    padding: 20px;
+}
+main > .showBox {
+    width: 100%;
+    height: 200px;
+    background: gainsboro;
+}
+main > .numBox {
+    width: 100%;
+    height: 400px;
+    background: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+main > .numBox > li {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    align-content: center;
+    background: #aaa;
+    color: #fff;
+    transition: .5s;
+}
+.press {
+    background: #fff;
+    color: #111;
+    transition: .5s;
+}
