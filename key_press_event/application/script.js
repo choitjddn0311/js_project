@@ -15,7 +15,7 @@ const keypress = () => {
         }
     })
 }
-//에러
+//에러러
 const numpress = () => {
     num.addEventListener('click' , () => {
         showBox.innerHTML = num.value;
