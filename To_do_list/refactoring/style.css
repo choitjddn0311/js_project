@@ -13,14 +13,18 @@ li {
     list-style: none;
 }
 input[type=checkbox] {
-    width: 50px;
-    height: 50px;
-    appearance: none;
-    border-radius: 50%;
-    background: #fff;
+    appearance: none; /* 기본(네이티브) 모양을 제거 */
+    box-sizing: border-box;
+    background-clip: content-box;
+    padding: 0.25em;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid gray;
+    cursor: pointer;
 }
-input[type=checkbox]:checked {
-    background: skyblue;
+[type="checkbox"]:checked {
+    border-color: yellowgreen;
+    background-color: yellowgreen;
 }
 main {
     width: 400px;
