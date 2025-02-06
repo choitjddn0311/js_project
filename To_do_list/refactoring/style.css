@@ -23,7 +23,7 @@ input[type=checkbox] {
     cursor: pointer;
 }
 [type="checkbox"]:checked {
-    border-color: yellowgreen;
+    border-color: red;
     background-color: yellowgreen;
 }
 main {
