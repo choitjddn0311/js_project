@@ -26,7 +26,6 @@ const listAdd = () => {
 const listModal = () => {
     listBox.addEventListener('click' , (e) => {
         if(e.target.closest('li')) {
-            
         }
     })
 }
