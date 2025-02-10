@@ -24,17 +24,17 @@ const listAdd = () => {
         }
     })
 }
-// const listModal = () => {
-//     const closeBtn = document.getElementById('closeBtn');
-//     listBox.addEventListener('click' , (e) => {
-//         if(e.target.closest('li')) {
-//             modal.classList.add('showModal');
-//         }
-//     })
-//     closeBtn.addEventListener('click' , () => {
-//         modal.classList.remove('showModal');
-//     })
-// }
+const listModal = () => {
+    const closeBtn = document.getElementById('closeBtn');
+    listBox.addEventListener('click' , (e) => {
+        if(e.target.closest('li')) {
+            modal.classList.add('showModal');
+        }
+    })
+    closeBtn.addEventListener('click' , () => {
+        modal.classList.remove('showModal');
+    })
+}
 const ChildCk = () => {
     if(listBox.children.length === 0){
     listBox.innerHTML = `<h1 class="noChild">오늘의 일정이 없습니다.</h1>`
@@ -43,4 +43,4 @@ const ChildCk = () => {
 
 ChildCk();
 listAdd();
-// listModal();
+listModal();
