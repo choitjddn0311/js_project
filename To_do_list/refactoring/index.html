@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <div class="listModalCon" id="modal">
+        <div class="listModal">
+            <input type="text" id="changeText">
+            <div class="modalBtnBox">
+                <button class="saveBtn">Save</button>
+                <button class="closeBtn" id="closeBtn">Close</button>
+            </div>
+        </div>
+    </div>
     <main>
         <header>
             <div class="title">
@@ -19,15 +28,6 @@
             <p><button id="addBtn"><i class="fa-solid fa-plus"></i></button></p>
         </nav>
         <ul class="listBox" id="listBox">
-            <div class="listModalCon" id="modal">
-                <div class="listModal">
-                    <input type="text" id="changeText">
-                    <div class="modalBtnBox">
-                        <button class="saveBtn">Save</button>
-                        <button class="closeBtn" id="closeBtn">Close</button>
-                    </div>
-                </div>
-            </div>
         </ul>
     </main>
     <script src="script.js"></script>
