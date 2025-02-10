@@ -8,24 +8,26 @@ const listAdd = () => {
             myList.focus();
             return;
         }
-
         const noChildText = document.querySelector('.noChild');
         if(noChildText){
             noChildText.remove();
         }
 
         const listMax = Math.floor(listBox.clientHeight/40);
-        console.log(listMax);
         if(listBox.children.length <= listMax) {
             listBox.innerHTML += `
-            <li><p>${myList.value}</p> <input type="checkbox" class="listCK"></li>
+            <li class="list"><p>${myList.value}</p> <input type="checkbox" class="listCK"></li>
         `;
         } else if(listBox.children.length > listMax) {
             alert('더이상 추가할 수 없습니다.');
         }
-        
-
-
+    })
+}
+const listModal = () => {
+    listBox.addEventListener('click' , (e) => {
+        if(e.target.closest('li')) {
+            
+        }
     })
 }
 const ChildCk = () => {
@@ -36,3 +38,4 @@ const ChildCk = () => {
 
 ChildCk();
 listAdd();
+listModal();
