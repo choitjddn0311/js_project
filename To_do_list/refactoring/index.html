@@ -18,7 +18,15 @@
             <input type="text" id="myList" class="myList">
             <p><button id="addBtn"><i class="fa-solid fa-plus"></i></button></p>
         </nav>
-        <ul class="listBox" id="listBox"></ul>
+        <ul class="listBox" id="listBox">
+            <li class="list"><p>${myList.value}</p> <input type="checkbox" class="listCK"></li>
+            <div class="listModalCon">
+                <div class="listModal">
+                    <input type="text" id="changeText">
+                    <button class="saveBtn">Save</button>
+                </div>
+            </div>
+        </ul>
     </main>
     <script src="script.js"></script>
 </body>
