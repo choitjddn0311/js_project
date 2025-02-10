@@ -9,13 +9,17 @@
     padding: 0;
     font-family: 'Paperlogy-8ExtraBold';
 }
+:root {
+    --basicTransiton: 0.3s;
+    --mColor: #0eb4fc;
+}
 body {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0eb4fc;
+    background: var(--mColor);
 }
 li {
     list-style: none;
@@ -31,13 +35,8 @@ input[type=checkbox] {
     cursor: pointer;
 }
 [type="checkbox"]:checked {
-    border-color: #0eb4fc;
-    background-color: #0eb4fc;
-}
-.bgText {
-    top: 11%;
-    position: absolute;
-    font-size: 100px;
+    border-color: var(--mColor);
+    background-color: var(--mColor);
 }
 main {
     width: 400px;
@@ -45,20 +44,60 @@ main {
     background: #fefefe;
     border-radius: 10px;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 header {
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+nav {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.myList {
+    height: 40px;
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    font-size: 20px;
+}
+nav button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background: #fff;
+    border: 1px solid gray;
+    color: gray;
+    transition: var(--basicTransiton);
+}
+nav button:hover {
+    color: #111;
+    border: 1px solid #111;
+    cursor: pointer;
+    transition: var(--basicTransiton);
 }
 .listBox {
     padding: 10px 20px;
     height: 440px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
+    align-items: center;
+}
+.noChild {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    align-content: center;
 }
 .listBox > li {
     width: 100%;
