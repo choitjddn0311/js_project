@@ -40,7 +40,18 @@ const ChildCk = () => {
     listBox.innerHTML = `<h1 class="noChild">오늘의 일정이 없습니다.</h1>`
     }
 };
+const changeText = () => {
+    const changeText = document.getElementById('changeText');
+    const saveBtn = document.getElementById('saveBtn');
+    saveBtn.addEventListener('click' , () => {
+        // listBox.innerHTML += `
+        //     <li class="list"><p>${changeText.value}</p> <input type="checkbox" class="listCK"></li>
+        //     `;
+        // 원래 있던걸 -> changeText.value 변경
+    })
+}
 
 ChildCk();
 listAdd();
 listModal();
+changeText();
