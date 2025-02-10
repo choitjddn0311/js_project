@@ -129,6 +129,7 @@ nav button:hover {
     visibility: hidden;
     opacity: 0;
     transition: var(--basicTransiton);
+    z-index: 2;
 }
 .showModal {
     visibility: visible;
