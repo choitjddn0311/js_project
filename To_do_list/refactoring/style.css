@@ -126,6 +126,14 @@ nav button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--basicTransiton);
+}
+.showModal {
+    visibility: visible;
+    opacity: 1;
+    transition: var(--basicTransiton);
 }
 .listModalCon > .listModal {
     width: 500px;
@@ -143,16 +151,30 @@ nav button:hover {
     font-size: 20px;
     padding-left: 10px;
 }
-.listModal > .saveBtn {
+.listModal > .modalBtnBox  {
     width: 20%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+.modalBtnBox > button {
+    width: 100%;
     height: 40%;
     background: #0eb4fc;
     color: #fff;
     border: none;
     transition: var(--basicTransiton);
 }
-.listModal > .saveBtn:hover {
+.saveBtn:hover {
     background: #1383b3;
+    transition: var(--basicTransiton);
+    cursor: pointer;
+}
+.closeBtn:hover {
+    background: red;
     transition: var(--basicTransiton);
     cursor: pointer;
 }
