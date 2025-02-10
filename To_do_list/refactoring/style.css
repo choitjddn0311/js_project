@@ -106,6 +106,7 @@ nav button:hover {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 .listBox > li::after {
     content: '';
@@ -115,6 +116,45 @@ nav button:hover {
     background: #333;
     bottom: 0;
     left: 0;
+}
+.listModalCon {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listModalCon > .listModal {
+    width: 500px;
+    height: 150px;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.listModal > input {
+    width: 40%;
+    height: 40%;
+    border: 1px solid #333;
+    outline: none;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.listModal > .saveBtn {
+    width: 20%;
+    height: 40%;
+    background: #0eb4fc;
+    color: #fff;
+    border: none;
+    transition: var(--basicTransiton);
+}
+.listModal > .saveBtn:hover {
+    background: #1383b3;
+    transition: var(--basicTransiton);
+    cursor: pointer;
 }
 .listBox > li > p {
     width: 80%;
