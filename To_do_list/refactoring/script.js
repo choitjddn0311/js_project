@@ -43,15 +43,32 @@ const ChildCk = () => {
 const changeText = () => {
     const changeText = document.getElementById('changeText');
     const saveBtn = document.getElementById('saveBtn');
-    saveBtn.addEventListener('click' , () => {
-        // listBox.innerHTML += `
-        //     <li class="list"><p>${changeText.value}</p> <input type="checkbox" class="listCK"></li>
-        //     `;
-        // 원래 있던걸 -> changeText.value 변경
-    })
+
+    let selectedListItem = null;
+
+    listBox.addEventListener('click', (e) => {
+        if (e.target.closest('li')) {
+            selectedListItem = e.target.closest('li'); // 클릭한 <li> 요소 저장
+            const currentText = selectedListItem.querySelector('p').innerText;
+            changeText.value = currentText; // 기존 내용을 input에 넣기
+            modal.classList.add('showModal');
+        }
+    });
+
+    saveBtn.addEventListener('click', () => {
+        if (selectedListItem && changeText.value.trim() !== '') {
+            selectedListItem.querySelector('p').innerText = changeText.value; // 기존 값 변경
+            modal.classList.remove('showModal');
+        } else if(selectedListItem || changeText.value == ''){
+            alert('수정할 내용을 입력해주세요.');
+            changeText.focus();
+        }
+    });
 }
 
 ChildCk();
 listAdd();
 listModal();
 changeText();
+
+// input창을 체크했을때도 모달이 켜짐 (p태그 기준으로 클릭됐을때로 설정할 것)
