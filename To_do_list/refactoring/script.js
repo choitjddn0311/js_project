@@ -27,7 +27,8 @@ const listAdd = () => {
 const listModal = () => {
     const closeBtn = document.getElementById('closeBtn');
     listBox.addEventListener('click' , (e) => {
-        if(e.target.closest('li')) {
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'P') {
             modal.classList.add('showModal');
         }
     })
@@ -47,11 +48,10 @@ const changeText = () => {
     let selectedListItem = null;
 
     listBox.addEventListener('click', (e) => {
-        if (e.target.closest('li')) {
+        if (e.target.tagName === "P") {
             selectedListItem = e.target.closest('li'); // 클릭한 <li> 요소 저장
             const currentText = selectedListItem.querySelector('p').innerText;
             changeText.value = currentText; // 기존 내용을 input에 넣기
-            modal.classList.add('showModal');
         }
     });
 
