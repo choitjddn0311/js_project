@@ -108,14 +108,21 @@ nav button:hover {
     position: relative;
     cursor: pointer;
 }
-.listBox > li::after {
-    content: '';
-    position: absolute;
+.under {
     width: 80%;
-    height: 1px;
-    background: #333;
-    bottom: 0;
+    position: absolute;
     left: 0;
+    bottom: 0;
+    background: #333;
+    height: 1px;
+    transition: var(--basicTransiton);
+}
+.afterCheck {
+    position: absolute;
+    bottom: 50%;
+    transition: var(--basicTransiton);
+    color: #aaa;
+    background: #aaa;
 }
 .listModalCon {
     width: 100%;
