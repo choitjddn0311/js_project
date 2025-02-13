@@ -19,6 +19,8 @@ const listAdd = () => {
             listBox.innerHTML += `
             <li class="list"><div class="under"></div><p>${myList.value}</p> <input type="checkbox" class="listCK"></li>
             `;
+            myList.value = '';
+            myList.focus();
         } else if(listBox.children.length > listMax) {
             alert('더이상 추가할 수 없습니다.');
         }
@@ -88,4 +90,4 @@ checkInput();
 
 
 // 변경은 다 잘되나 새로운 todolist를 생성할 때 input checkbox해제
-// todolist를 생성 후 -> input창 그 내용으로 채워져있음 (비워워지게 해놓기)
+// todolist를 생성 후 -> input창 그 내용으로 채워져있음 (비워워지게 해놓기) < 해결완료
