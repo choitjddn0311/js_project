@@ -17,7 +17,7 @@ const listAdd = () => {
         const listMax = Math.floor(listBox.clientHeight/40);
         if(listBox.children.length <= listMax) {
             listBox.innerHTML += `
-            <li class="list"><p>${myList.value}</p> <input type="checkbox" class="listCK"></li>
+            <li class="list"><div class="under"></div><p>${myList.value}</p> <input type="checkbox" class="listCK"></li>
             `;
         } else if(listBox.children.length > listMax) {
             alert('더이상 추가할 수 없습니다.');
@@ -65,10 +65,27 @@ const changeText = () => {
         }
     });
 }
-
+const checkInput = () => {
+    listBox.addEventListener('change' , (e) => {
+        if(e.target.classList.contains('listCK')) {
+            const listItem = e.target.closest('li');
+            const under = listItem.querySelector('.under');
+            if(e.target.checked) {
+                under.classList.add('afterCheck');
+                e.target.closest('li').style.color = "#aaa";
+            } else {
+                under.classList.remove('afterCheck');
+                e.target.closest('li').style.color = "#333";
+            }
+        }
+    })
+}
 ChildCk();
 listAdd();
 listModal();
 changeText();
+checkInput();
 
-// input창을 체크했을때도 모달이 켜짐 (p태그 기준으로 클릭됐을때로 설정할 것)
+
+// 변경은 다 잘되나 새로운 todolist를 생성할 때 input checkbox해제
+// todolist를 생성 후 -> input창 그 내용으로 채워져있음 (비워워지게 해놓기)
